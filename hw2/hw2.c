@@ -1,3 +1,8 @@
+/*
+ 2020-2 [OPERATING SYSTEMS] Assignment #2
+ JuYoung Oh / 20161872 / Electrical & Electronics Engineering
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
