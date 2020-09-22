@@ -28,9 +28,7 @@ int main(){
 	int* gNumber_result[THREAD_NUM];
 	int error_code;
 
-	void* (*fp[THREAD_NUM])(void*);	
-	fp[0] = producer_function;
-	fp[1] = consumer_function;
+	void* (*fp[THREAD_NUM])(void*) = {producer_function, consumer_function};	
 
 	for(; i < THREAD_NUM; i++){
 		status = pthread_create(&threads[i], NULL, fp[i], NULL);
