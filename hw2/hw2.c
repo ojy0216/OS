@@ -23,11 +23,10 @@ void* consumer_function(void* arg);
 int gNumber = -1;
 
 int main(){
-	int res;
 	pthread_t threads[THREAD_NUM];
 	char thread_name[THREAD_NUM][MAX_THREAD_NAME_LENGTH] = {"producer", "consumer"};
 	char thread_name_got[THREAD_NUM][MAX_THREAD_NAME_LENGTH];
-	int status, i = 0;
+	int status, res, i = 0;
 	int* gNumber_result[THREAD_NUM]; // For producer, consumer each
 
 	void* (*fp[THREAD_NUM])(void*) = {producer_function, consumer_function};	
