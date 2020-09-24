@@ -36,7 +36,7 @@ int main(){
 	}
 
 	for(i = 0; i < THREAD_NUM; i++){
-		if(pthread_join(thread[i], &gNumber_result[i]) != 0){
+		if(pthread_join(threads[i], &gNumber_result[i]) != 0){
 			printf("Thread join failed\n");
 			return -1;
 		}
@@ -58,7 +58,7 @@ void* producer(void* arg){
 		if(gNumber == -1){
 			rand_int = rand() % 100;
 			sum += rand_int;
-			printf("[%d]Generated random int: %d\n", i, rand_int);
+			printf("[%d]Producer generated: %d\n", i, rand_int);
 			gNumber = rand_int;
 		}
 		else
@@ -71,7 +71,7 @@ void* consumer(void* arg){
 	int i = 0, sum = 0;
 	for(; i < ROUND; i++){
 		if(gNumber != -1){
-			printf("[%d]Consumer readout: %d\n", i, gNumber);
+			printf("[%d]Consumer read: %d\n", i, gNumber);
 			sum += gNumber;
 			gNumber = -1;
 		}
