@@ -1,3 +1,8 @@
+/*
+2020-2 [OPERATING SYSTEMS] Assignment #3
+JuYoung Oh / 20161872 / Electrical & Electronics Engineering
+*/
+
 #include <stdio.h>
 #include <unistd.h>
 #include <pthread.h>
