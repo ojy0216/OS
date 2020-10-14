@@ -3,15 +3,14 @@
 JuYoung Oh / 20161872 / Electrical & Electronics Engineering
 */
 
+// complile option with "-no-pie"
+
 #include <stdio.h>
 #include <unistd.h>
 #include <pthread.h>
 #include <stdlib.h>
 
-#define ROUND 10
-#define BANK_INIT_BALANCE 100
 #define CLIENT_NUM 2
-// complile option with "-no-pie"
 
 unsigned int bank_balance = 100;
 unsigned int client_debt[CLIENT_NUM] = {0, 0};
