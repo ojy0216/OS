@@ -1,0 +1,1 @@
+cmd_/home/jy/os-git/hw5/ioctl/virtual_buffer.ko := ld -r -m elf_x86_64 -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/jy/os-git/hw5/ioctl/virtual_buffer.ko /home/jy/os-git/hw5/ioctl/virtual_buffer.o /home/jy/os-git/hw5/ioctl/virtual_buffer.mod.o ;  true
