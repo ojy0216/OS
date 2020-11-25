@@ -1,0 +1,1 @@
+cmd_/home/jy/os-git/hw5/hello/hello.ko := ld -r -m elf_x86_64 -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/jy/os-git/hw5/hello/hello.ko /home/jy/os-git/hw5/hello/hello.o /home/jy/os-git/hw5/hello/hello.mod.o ;  true
